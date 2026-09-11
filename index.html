@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Little Something For You ♡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sparkles" id="sparkles"></div>
+
+  <main class="app">
+    <!-- PAGE 1: ENVELOPE -->
+    <section class="page active" id="page1">
+      <div class="tiny-label">A LITTLE SOMETHING FOR YOU</div>
+      <h1>happy birthday ♡</h1>
+      <div class="envelope-wrap">
+        <button class="envelope" id="openEnvelope" aria-label="Open envelope">
+          <span class="flap"></span>
+          <span class="paper"></span>
+          <span class="seal">♡</span>
+        </button>
+      </div>
+      <p class="hint">TAP THE SEAL TO OPEN ♡</p>
+    </section>
+
+    <!-- PAGE 2: BIRTHDAY CARD -->
+    <section class="page" id="page2">
+      <div class="card">
+        <div class="eyebrow">♡ ONLY FOR YOU ♡</div>
+        <div class="avatar">🎀</div>
+        <h2>Happy Birthday</h2>
+        <h3 id="name"></h3>
+        <div class="line"></div>
+        <p id="intro"></p>
+
+        <button class="round-next" id="toAlbum">›</button>
+        <div class="song-note">a song for you ♡</div>
+        <button class="play" id="playMusic">▶</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: ALBUM -->
+    <section class="page" id="page3">
+      <div class="tiny-label">OUR LITTLE ALBUM</div>
+      <p class="sub">a few of my favourite moments with you ♡</p>
+
+      <div class="photo-card">
+        <div class="photo" id="albumPhoto">
+          <span id="photoEmoji">🐹🎂</span>
+        </div>
+        <div class="photo-caption" id="photoCaption"></div>
+        <div class="photo-count" id="photoCount"></div>
+      </div>
+
+      <div class="arrows">
+        <button id="prevPhoto">‹</button>
+        <button id="nextPhoto">›</button>
+      </div>
+      <button class="text-next" id="toBouquet">continue ♡</button>
+    </section>
+
+    <!-- PAGE 4: BOUQUET -->
+    <section class="page" id="page4">
+      <div class="tiny-label">A TINY BOUQUET OF BIRTHDAY WISHES</div>
+      <p class="sub">pick each flower — there's a little wish inside ♡</p>
+
+      <div class="bouquet">
+        <button class="flower f1" data-wish="May this year bring you more reasons to smile.">🌼</button>
+        <button class="flower f2" data-wish="I hope you get everything your heart quietly wishes for.">🌷</button>
+        <button class="flower f3" data-wish="Never forget how loved and appreciated you are.">🌸</button>
+        <button class="flower f4" data-wish="May your next chapter be softer, brighter and full of surprises.">🌻</button>
+        <div class="vase">⌒</div>
+      </div>
+
+      <div class="wish-box" id="wishBox">pick a flower ♡</div>
+      <button class="text-next" id="toLetter">one last thing ♡</button>
+    </section>
+
+    <!-- PAGE 5: LETTER -->
+    <section class="page" id="page5">
+      <div class="letter">
+        <div class="letter-top">A LETTER JUST FOR YOU ♡</div>
+        <h2 id="letterGreeting"></h2>
+        <p id="letterText"></p>
+        <div class="signature">with all my love,<br><b>your friend</b> ♡</div>
+      </div>
+      <button class="restart" id="restart">open it again ↻</button>
+    </section>
+  </main>
+
+  <!-- Optional audio: put your own MP3 at audio/song.mp3 -->
+  <audio id="music" loop>
+    <source src="audio/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
